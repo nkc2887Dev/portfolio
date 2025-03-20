@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fff;
+  --foreground: #171717;
+  --text-color: #637381;
+  --primary-text-color: #333333; /* Example: dark gray */
+  --secondary-text-color: #637381;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+}
+
+html {
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+body,
+#root,
+#root__layout {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  color: var(--primary-text-color);
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+@layer components {
+  .shadow-smooth {
+    @apply transition-shadow duration-300 ease-in-out;
+    box-shadow: rgba(145, 158, 171, 0.2) 0px 0px 2px 0px,
+      rgba(145, 158, 171, 0.12) 0px 12px 24px -4px;
+  }
+
+  .shadow-smooth-hover:hover {
+    box-shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px 0px,
+      rgba(145, 158, 171, 0.16) 0px 16px 32px -6px;
+  }
+}
