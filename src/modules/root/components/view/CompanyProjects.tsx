@@ -48,8 +48,8 @@ const CompanyProjects = () => {
                       {project.role}
                     </p>
                     {project.desc.map((desc, index) => (
-                      <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm mt-1">
-                        <p key={index}>
+                      <div key={index} className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm mt-1">
+                        <p>
                           <Minus className="inline-block pr-2" />
                           {desc}
                         </p>
